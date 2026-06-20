@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shalu Kumari | AI Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:white;
+overflow-x:hidden;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.2);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00f5ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff4ecd;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:100px 10%;
+}
+
+.left{
+max-width:600px;
+}
+
+.left h3{
+font-size:22px;
+}
+
+.left h1{
+font-size:70px;
+color:#00f5ff;
+}
+
+.left h2{
+color:#ff4ecd;
+height:50px;
+margin:10px 0;
+}
+
+.left p{
+line-height:1.8;
+margin:20px 0;
+}
+
+.btn{
+padding:15px 35px;
+border:none;
+border-radius:40px;
+font-size:18px;
+font-weight:bold;
+background:linear-gradient(45deg,#00f5ff,#ff4ecd);
+cursor:pointer;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+.right img{
+width:380px;
+height:380px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #00f5ff;
+box-shadow:
+0 0 20px #00f5ff,
+0 0 40px #ff4ecd,
+0 0 80px #00f5ff;
+animation:float 4s infinite ease-in-out;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-20px);
+}
+}
+
+section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:45px;
+margin-bottom:50px;
+color:#00f5ff;
+}
+
+.glass{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:25px;
+}
+
+.about p{
+text-align:center;
+line-height:2;
+font-size:18px;
+}
+
+.skills{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.skill{
+width:150px;
+height:150px;
+border-radius:50%;
+background:linear-gradient(135deg,#00f5ff,#ff4ecd);
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:bold;
+font-size:18px;
+transition:.5s;
+}
+
+.skill:hover{
+transform:scale(1.15) rotate(10deg);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+transition:.5s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card span{
+font-size:30px;
+}
+
+.card h3{
+margin:15px 0;
+color:#00f5ff;
+}
+
+.resume{
+text-align:center;
+}
+
+.resume a{
+text-decoration:none;
+color:black;
+}
+
+.contact{
+text-align:center;
+line-height:2.5;
+font-size:18px;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:rgba(0,0,0,0.3);
+margin-top:50px;
+}
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+gap:40px;
+}
+
+.left h1{
+font-size:50px;
+}
+
+.right img{
+width:280px;
+height:280px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Shalu.ai</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="left">
+
+<h3>Hello, I'm</h3>
+
+<h1>Shalu Kumari</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Computer Science Engineering Student passionate about
+Artificial Intelligence, Web Development and Ethical Technology.
+
+I love building impactful solutions that solve real-world problems through innovation.
+</p>
+
+<button class="btn">Explore My Work</button>
+
+</div>
+
+<div class="right">
+<img src="Screenshot 2026-05-19 192755.png" alt="Shalu">
+</div>
+
+</section>
+
+<section id="about" class="hidden">
+
+<h2 class="title">About Me</h2>
+
+<div class="glass about">
+
+<p>
+I am an aspiring Software Engineer interested in AI, Machine Learning,
+Web Development and emerging technologies.
+
+My mission is to build responsible AI systems that help society.
+Apart from coding, I enjoy drawing and creative design which helps me
+approach problems with innovation and imagination.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills" class="hidden">
+
+<h2 class="title">Tech Arsenal</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">C</div>
+<div class="skill">AI</div>
+<div class="skill">Web Dev</div>
+<div class="skill">ML</div>
+<div class="skill">Drawing</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="hidden">
+
+<h2 class="title">Mission Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+
+<span>🚀</span>
+
+<h3>Fake News Detector</h3>
+
+<p>
+AI-powered misinformation detection system using NLP and Machine Learning techniques.
+</p>
+
+</div>
+
+<div class="card">
+
+<span>🧠</span>
+
+<h3>AI Bias Detection Model</h3>
+
+<p>
+Model built to identify unfair predictions and improve AI transparency and fairness.
+</p>
+
+</div>
+
+<div class="card">
+
+<span>🌐</span>
+
+<h3>Portfolio Website</h3>
+
+<p>
+Responsive personal portfolio built using HTML, CSS and JavaScript.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="resume hidden">
+
+<h2 class="title">Resume</h2>
+
+<button class="btn">
+<a href="#">Download Resume</a>
+</button>
+
+</section>
+
+<section id="contact" class="hidden">
+
+<h2 class="title">Contact</h2>
+
+<div class="glass contact">
+
+<p>📧 shalu@email.com</p>
+
+<p>💻 GitHub : github.com/shalu</p>
+
+<p>🔗 LinkedIn : linkedin.com/in/shalu</p>
+
+<p>📍 Bihar, India</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Designed & Developed by Shalu Kumari 🚀
+</p>
+
+</footer>
+
+<script>
+
+const roles=[
+"AI Enthusiast",
+"Web Developer",
+"Problem Solver",
+"Future Software Engineer",
+"Tech Innovator"
+];
+
+let roleIndex=0;
+let charIndex=0;
+
+function typeEffect(){
+
+let currentRole=roles[roleIndex];
+
+document.getElementById("typing").textContent=
+currentRole.substring(0,charIndex);
+
+charIndex++;
+
+if(charIndex>currentRole.length){
+
+setTimeout(()=>{
+charIndex=0;
+roleIndex=(roleIndex+1)%roles.length;
+},1000);
+
+}
+
+setTimeout(typeEffect,150);
+
+}
+
+typeEffect();
+
+const hidden=document.querySelectorAll('.hidden');
+
+window.addEventListener('scroll',()=>{
+
+hidden.forEach(el=>{
+
+const top=el.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+
+el.classList.add('show');
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
